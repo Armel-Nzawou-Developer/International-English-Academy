@@ -24,6 +24,8 @@ It showcases services, courses options, About and services, for the Internationa
 - HTML5
 - Modern CSS3 (Flexbox, Grid, Media Queries)
 - Form Handling API from "Web3Forms" (https://docs.web3forms.com)
+-  Swiper js for the slider for the Services & About testimonial sections | refs: (https://swiperjs.com/get-started) and,
+ https://www.youtube.com/watch?v=UJY8GWmoMfo&t=11s
 
 -  Palette Color:
 
