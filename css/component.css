@@ -54,6 +54,17 @@
 }
 /* END - styling for hover over bottom border */
 
+
+.inner-nav-item button {
+  margin: -1.7rem 0.5rem;
+}
+
+/* active page */
+#header a.active {
+  color:  var(--primary-color);
+ 
+ }
+
 .flex-WhatsApp-icon > img {
   height: 15px;
 }
@@ -61,13 +72,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.active a {
-  color: var(--primary-color);
-}
-.inner-nav-item button {
-  margin: -1.7rem 0.5rem;
 }
 
 /* ================= BUTTONS =================   */
