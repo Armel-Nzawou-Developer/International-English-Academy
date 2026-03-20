@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEA | Message sent successfully!</title>
+    <link rel="icon" type="image/png" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      body {
+        border-top: 5px solid var(--primary-color);
+        border-bottom: 5px solid var(--primary-color);
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--pages-sections-bg-color);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .thankyou-card {
+        margin: 25px 25px;
+        background: var(--hover-color);
+        border-radius: 12px;
+        box-shadow: 0 8px 20px var(--primary-color);
+        padding: 40px;
+        text-align: center;
+        max-width: 400px;
+        animation: fadeIn 1s ease-in-out;
+      }
+      .thankyou-card h1 {
+        font-size: 28px;
+        margin: 0;
+        color: var(--text-secondary);
+      }
+      .thankyou-card p {
+        font-size: 16px;
+        color: var(--primary-color);
+        padding: 10px;
+      }
+      .thankyou-card a {
+        font-size: 16px;
+        color: var(--text-secondary);
+
+        text-decoration: none;
+      }
+
+      .card-image > img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 80px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* ================= ANIMATION =================  */
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thankyou-card">
+      <div class="card-image">
+        <img src="./icons/sent-message-icon.svg" alt="sent-messge-icon" />
+      </div>
+      <h1>Thank You!</h1>
+      <p>Message submitted successfully! <br />We will reply to you shortly!</p>
+      <a
+        href="https://armel-nzawou-developer.github.io/International-English-Academy/"
+      >
+        ← Go Back
+      </a>
+    </div>
+  </body>
+</html>
