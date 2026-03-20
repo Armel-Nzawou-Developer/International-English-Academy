@@ -16,7 +16,7 @@ It showcases services, courses options, About and services, for the Internationa
 
 4. Folder structure
 
-![alt text](ieacademy.com/images/folder-structure.png)
+![alt text](images/folder-structure.png)
 
 
 5. Technologies Used
