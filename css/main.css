@@ -1,0 +1,26 @@
+/*  Global styles (RESET, colors, typography, layout)================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --primary-color: #d3aa60;
+  --secondary-color: #4b7679;
+  --tertiary-color: #5b7c7f;
+  --hover-color: #445767;
+  --text-primary: rgb(31, 24, 24);
+  --text-secondary: #ffff;
+  --text-body: grey;
+  --pages-sections-bg-color:  rgb(242, 238, 238);
+}
+html {
+  scroll-behavior: smooth;
+  background-color: var(--text-secondary);
+}

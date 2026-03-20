@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - International English Academy</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      body {
+        background-color: var( --pages-sections-bg-color);
+      }
+
+      /* ================= CONTACT DESCRIPTION ================= */
+      .contact-description {
+        margin-top: 115px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--hover-color);
+        border-bottom: 3px solid var(--text-secondary);
+        animation: fadeUp 1s ease forwards;
+      }
+      .contact-description-text {
+        padding: 2rem 2rem;
+      }
+      .contact-description-text > h1 {
+        color: var(--text-secondary);
+        padding: 0.5rem 2rem;
+        text-align: start;
+        animation: fadeDown 2s ease forwards;
+      }
+      em {
+        padding: 1rem 2rem;
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      .contact-description-text > p {
+        color: var(--text-secondary);
+        padding: 1rem 2rem;
+        text-align: start;
+        animation: fadeUp 2s ease forwards;
+
+      }
+      .contact-descrition-image {
+        height: 100%;
+        width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1487611459768-bd414656ea10?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* ================= COTACT INFORMATION  ================= */
+      .section-contact {
+        border-radius: 10px;
+        padding: 1rem 1rem;
+        margin: 1rem 1rem;
+        background-color: var(--text-secondary);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+   
+      }
+      .section-header {
+        padding: 1rem 1rem;
+        text-align: center;
+        font-family: 35px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+      }
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+      }
+      .contact-info {
+        padding: 1rem 1rem;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary-color);
+        opacity: 0.9;
+        max-width: 25rem;
+      }
+      .contact-info > h3,
+      p {
+        padding: 0.5rem;
+        color: var(--text-secondary);
+        text-shadow: var(--hover-color);
+      }
+
+      .flex-info {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+     .email-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 100%;
+      }
+      .contact-form {
+        padding: 2rem 2rem;
+        height: 100%;
+        background-color: var(--secondary-color);
+        opacity: 0.9;
+        max-width: 25rem;
+      }
+      .contact-form > h3,
+      p {
+        text-shadow: var(--hover-color);
+        padding: 0.5rem;
+        color: var(--text-secondary);
+      }
+     .map iframe{
+        padding: 1rem 1rem;
+        height: 300px;
+        width: 100%;
+     }
+
+
+      /* ================= RESPONSIVE FORM =================  */
+
+      .responsive-form{
+        display: flex;
+        flex-direction: column;
+      }
+
+      input,select{
+ 
+        height: 50px;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      textarea{
+        height: 100px;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+
+      /* ================= RESPONSIVE =================  */
+
+      @media (width <= 790px) {
+        .contact-description {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .contact-descrition-image {
+          order: 2;
+        }
+
+        .contact-description-text {
+          order: 1;
+        }
+
+        .contact-descrition-image {
+          height: 22rem;
+        }
+
+      }
+      @media (width <= 885px) {
+
+        .contact-info,
+        .contact-form {
+          flex: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- -------------------- NAVIGATION -------------------- -->
+    <section id="header"></section>
+
+    <!-- -------------------- CONTACT DESCRIPTION  --------------------  -->
+    <section class="contact-description">
+      <div class="contact-descrition-image"></div>
+      <div class="contact-description-text">
+        <h1>Contact Us</h1>
+        <em>Get in touch today!</em>
+        <p>
+          Have a question or need more information? <br />
+          Feel free to reach out to us , our friendly staff will respond and
+          assist, <br />
+          you as soon as possible.
+        </p>
+      </div>
+    </section>
+    <!-- -------------------- COTACT INFORMATION   --------------------  -->
+    <section class="section-contact">
+      <div class="section-header">
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>contact information</h3>
+          <div class="flex-info">
+            <div class="rounded-bg-icons">
+              <a href="mailto:internationalenglishacademy01@gmail.com"><img src="./icons/email-icon.svg" alt=" email-icon" /></a>
+            </div>
+            <p class="email-text">internationalenglishacademy01@gmail.com</p>
+          </div>
+          <div class="flex-info">
+            <div class="rounded-bg-icons">
+             <a href="tel:+27610027927"><img src="./icons/phone-icon.svg" alt="phone-icon" /></a> 
+            </div>
+            <p>+27 61 002 7927</p>
+          </div>
+          <div class="flex-info">
+            <div class="rounded-bg-icons">
+              <img src="./icons/location-icon.svg" alt="location-icon"/>
+            </div>
+            <p>7 Anton Anreith, Jetty St, Cape Town, South Africa, 8001</p>
+          </div>
+          <div class="flex-info">
+            <div class="rounded-bg-icons">
+              <img src="./icons/open-hours-icon.svg" alt="open-hours-icon"/>
+            </div>
+            <p>Operating hours : 10:00 A.M - 04:30 P.M</p>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.889115291512!2d18.422273075440167!3d-33.91825332162139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc678b714ece29%3A0xda6bc8da349bfc81!2sInternational%20English%20Academy!5e0!3m2!1sen!2sza!4v1773873280834!5m2!1sen!2sza"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="contact-form">
+           <div class="responsive-form ">
+            <form action="https://api.web3forms.com/submit" method="POST">
+             <input type="hidden" name="access_key" value="650f4ca2-2f46-41f9-9456-42963db00d62">
+             <input type="hidden" name="redirect" value="https://armeldesign-solutions.web.app/public/thank-you.html"> <!-- redirect to thank you page -->
+             <input type="hidden" name="subject" value="IEA - Inquiries">  <!-- email Subject  -->
+             
+             <!-- Input for first name -->
+             <input type="text"  id="first_name" name="first_name" placeholder=" Your first name..."required/>
+  
+             <!-- Input for last name -->
+             <input type="text" id="last_name" name="last_name" placeholder=" Your last name..." required/>
+  
+             <!-- Input for email-->
+             <input type="email" id="email"name="email" placeholder=" Your email adress..."required/> 
+               
+             <!-- Select tag for diffrent options -->
+             <select id="inquiry" name="inquiry">
+               <option value="">Reason for contacting </option>
+               <option value="General English">General English</option>
+               <option value="Business English"> Business English</option>
+               <option value="Exam Preparation">Exam Preparation</option>
+               <option value="Services offered"> Services offered</option>
+               <option value="Quote request"> Quote request</option>
+             </select>
+  
+             <!-- Textarea for Message -->
+             <textarea  name="Message"placeholder=" Your Message..."required ></textarea>
+             <!-- Submit Button --> 
+             <div >
+               <button  class="btn-tp-2" type="submit" value="submit">Send</button>
+              </div>
+           </form>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- FOOTER --------------------  -->
+    <section id="footer"></section>
+    
+    <button onclick="topFunction()" id="topArrowBtn" title="Go to top"><img src="./icons/top-arrow.svg" alt="top-arrow"></button>
+    <script src="./js/headerFooter.js"></script>
+  </body>
+</html>

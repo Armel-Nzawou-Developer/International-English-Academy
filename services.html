@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - International English Academy</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      body {
+        background-color: var( --pages-sections-bg-color);
+      }
+
+      /* ================= SERVICES DESCRIPTION ================= */
+      .services-description {
+        margin-top: 115px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--hover-color);
+        border-bottom: 3px solid var(--text-secondary);
+        animation: fadeUp 1s ease forwards;
+      }
+      .services-description-text {
+        padding: 2rem 2rem;
+      }
+      .services-description-text > h1 {
+        color: var(--text-secondary);
+        padding: 1rem 2rem;
+        text-align: start;
+        animation: fadeDown 2s ease forwards;
+      }
+      em {
+        padding: 1rem 2rem;
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      .services-description-text > p {
+        color: var(--text-secondary);
+        padding: 1rem 2rem;
+        text-align: start;
+        animation: fadeUp 2s ease forwards;
+
+      }
+      .services-descrition-image {
+        height: 22rem;
+        background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* ================= SERVICES OFFERED ================= */
+
+      .services-offered {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        grid-template-columns: 1fr 1fr;
+        margin: auto auto;
+        border-radius: 15px;
+        background-color: var(--text-secondary);
+        overflow: hidden;
+      }
+      .services-details {
+        padding: 1rem 1rem;
+        max-width: 31rem;
+      }
+      .services-details > h2 {
+        margin: 0rem 1rem;
+        color: var(--hover-color);
+      }
+      .services-details > p {
+        padding: 1rem 1rem;
+        color: var(--hover-color);
+      }
+      .services-assitance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem;
+        width: 100%;
+        height: 50vh;
+        background-image: url("https://images.pexels.com/photos/8867434/pexels-photo-8867434.jpeg?_gl=1*lqpj3q*_ga*MzI1MDc0MDY2LjE3Njc5Njk2MzM.*_ga_8JE65Q40S6*czE3NzM2MjI1MjgkbzEzJGcxJHQxNzczNjIyNTUwJGozOCRsMCRoMA..");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .services-assitance > h2 {
+        text-align: center;
+        color: var(--text-primary);
+        text-shadow: 0px 5px 15px var(--text-secondary);
+        padding: 1rem 1rem;
+      }
+      .services-assitance > a {
+        text-align: center;
+        width: fit-content;
+        color: var(--hover-color);
+        padding: 1rem 1rem;
+      }
+
+      /* ================= CSS ACCORDION ================= */
+
+      .accordion {
+        background-color: var(--hover-color);
+        color: var(--text-secondary);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        border-radius: 5px;
+        font-weight: 700;
+        animation: fadeIn 2s ease-in-out;
+        margin-bottom: 5px;
+        transition: 0.3s ease;
+      }
+      .active,
+      .accordion:hover {
+        background-color: var(--text-primary);
+      }
+      .accordion:after {
+        content: "\002B";
+        color: var(--text-secondary);
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+      .active:after {
+        content: "\2212";
+      }
+      .panel {
+        padding: 0 1rem;
+        background-color:var( --pages-sections-bg-color);
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        transition: max-height 0.8s ease-out;
+      }
+      .panel li {
+        color: var(--hover-color);
+        padding: 0.5rem 0.5rem;
+        margin: 0.5rem 1rem;
+      }
+
+      /* ================= WHAT OUR CLIENTS SAY ================= */
+      .testimonials {
+        padding: 100px 0;
+      }
+
+      .container {
+        max-width: 70rem;
+        margin: auto;
+        padding: 0 15px;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .section-header {
+        font-family: 35px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+        line-height: 1.2;
+      }
+      .section-header > h2 {
+        font-size: 2rem;
+      }
+
+      .testimonials-item {
+        padding: 30px;
+        z-index: 1;
+        border: 0.5px solid var(--hover-color);
+        box-shadow: -10px 25px 15px var(--hover-color);
+
+      }
+
+      .testimonials-item .info {
+        display: flex;
+        align-items: center;
+      }
+      .testimonials-item img {
+        max-width: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+      .testimonials-item .name {
+        font-size: 24px;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: var(--primary-color);
+        line-height: 1.2;
+      }
+      .testimonials-item .job {
+        text-transform: capitalize;
+        color: var(--hover-color);
+      }
+      .testimonials-item p {
+        margin-top: 20px;
+        color: var(--hover-color);
+      }
+      .testimonials-item .rating {
+        margin-top: 15px;
+        font-size: 14px;
+        color: var(--primary-color);
+      }
+      .testimonials .swiper-pagination {
+        position: relative;
+        margin-top: 40px;
+        bottom: auto;
+      }
+      .swiper-text p {
+        font-weight: 600;
+        padding: 0.25rem;
+        text-align: center;
+        color: var(--hover-color);
+      }
+      .testimonials .swiper-pagination-bullet {
+        height: 15px;
+        width: 15px;
+        background-color: var(--hover-color);
+        z-index: 1;
+      }
+
+
+      /* ================= RESPONSIVE =================  */
+
+      @media (width <= 790px) {
+        .services-description {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .services-descrition-image {
+          order: 2;
+        }
+
+        .services-description-text {
+          order: 1;
+        }
+
+        .services-offered {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- -------------------- NAVIGATION -------------------- -->
+    <section id="header"></section>
+
+    <!-- -------------------- SERVICES DESCRIPTION  --------------------  -->
+    <section class="services-description">
+      <div class="services-descrition-image"></div>
+      <div class="services-description-text">
+        <h1>Our Services</h1>
+        <em>Fast, Reliable & Affordable Services </em>
+        <p>
+          International English Academy provides professional translation,
+          interpretation, academic assistance, and language services with
+          efficiency and accuracy.
+        </p>
+      </div>
+    </section>
+    <!-- -------------------- SERVICES OFFERED  --------------------  -->
+    <section class="services-offered">
+      <div class="services-details">
+        <h2>Services Offered</h2>
+        <p>Fast, Reliable & Affordable Services</p>
+        <button class="accordion custom-bg-3">
+          Translation & Interpretation Services
+        </button>
+        <div class="panel">
+          <ul>
+            <li>
+              Sworn Translation Services & Interpretation (Portuguese / French
+              to English)
+            </li>
+            <li>Certified Translations – Same Day</li>
+            <li>Ordinary Translations</li>
+            <li>Website Translations</li>
+            <li>Medical & Technical Translations</li>
+            <li>Literary Translations</li>
+            <li>Movie Scripts & Subtitles Translations</li>
+            <li>Interpreter Services</li>
+            <li>Forensic Transcriptions (Audio/Video)</li>
+          </ul>
+        </div>
+        <button class="accordion custom-bg-1">
+          Academic & Student Services
+        </button>
+        <div class="panel">
+          <ul>
+            <li>Student Accommodation</li>
+            <li>High School or College Registration</li>
+            <li>Application for SAQA Evaluation</li>
+            <li>SAQA Application Assistance</li>
+            <li>General English Course (All Levels)</li>
+          </ul>
+        </div>
+        <button class="accordion custom-bg-2">
+          Printing & Office Services
+        </button>
+        <div class="panel">
+          <ul>
+            <li>Copy B/W</li>
+            <li>Copy Color</li>
+            <li>Print from Email</li>
+            <li>Binding</li>
+            <li>Laminating</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-assitance">
+        <h2>Our Team Is Ready to Assist You!</h2>
+        <a href="./contact.html" class="btn-tp-2">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- -------------------- WHAT OURS CLIENTS SAY  --------------------  -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What our clients say</h2>
+        </div>
+        <div class="testimonial-content">
+          <div class="swiper testimonial-slider js-testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <!-- <img src="./images/client-1.avif" alt="client-1" /> -->
+                  <div class="text-box">
+                    <div class="name">John Doe</div>
+                    <div class="job">Web Developer</div>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dignissimos consectetur necessitatibus dolore illo ipsum ipsam
+                  praesentium, sunt reiciendis impedit, itaque non, tempora rem
+                  odio a aut esse corrupti delectus perferendis.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <!-- <img src="./images//client-2.avif" alt="client-2" /> -->
+                  <div class="text-box">
+                    <div class="name">Arthur Doe</div>
+                    <div class="job">Web Designer</div>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dignissimos consectetur necessitatibus dolore illo ipsum ipsam
+                  praesentium, sunt reiciendis impedit, itaque non, tempora rem
+                  odio a aut esse corrupti delectus perferendis.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <!-- <img src="./images/client-3.avif" alt="client-3" /> -->
+                  <div class="text-box">
+                    <div class="name">Leanne Doe</div>
+                    <div class="job">Graphic Designer</div>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dignissimos consectetur necessitatibus dolore illo ipsum ipsam
+                  praesentium, sunt reiciendis impedit, itaque non, tempora rem
+                  odio a aut esse corrupti delectus perferendis.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <!-- <img src="./images/client-4.avif" alt="client-4" /> -->
+                  <div class="text-box">
+                    <div class="name">Lucian Doe</div>
+                    <div class="job">CEO & Web Developer</div>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dignissimos consectetur necessitatibus dolore illo ipsum ipsam
+                  praesentium, sunt reiciendis impedit, itaque non, tempora rem
+                  odio a aut esse corrupti delectus perferendis.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-text"><p>← Swipe →</p></div>
+          <div class="swiper-pagination js-testimonials-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- FOOTER --------------------  -->
+    <section id="footer"></section>
+    
+    <button onclick="topFunction()" id="topArrowBtn" title="Go to top"><img src="./icons/top-arrow.svg" alt="top-arrow"></button>
+    <script src="./js/headerFooter.js"></script>
+    <script src="./js/services.js"></script>
+    <!-- script for the testimonials swiper slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+      //script for the testimonials swiper slider
+      const swiper = new Swiper(".js-testimonials-slider", {
+        grabCursor: true,
+        spaceBetween: 30,
+        pagination: {
+          el: ".js-testimonials-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

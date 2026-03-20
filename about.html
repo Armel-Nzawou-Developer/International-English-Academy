@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - International English Academy</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      body {
+        background-color: var( --pages-sections-bg-color);
+      }
+
+      /* ================= ABOUT DESCRIPTION ================= */
+      .about-description {
+        margin-top: 115px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--hover-color);
+        border-bottom: 3px solid var(--text-secondary);
+        animation: fadeUp 1s ease forwards;
+      }
+      .about-description-text {
+        padding: 2rem 2rem;
+      }
+      .about-description-text > h1 {
+        color: var(--text-secondary);
+        padding: 0.5rem 2rem;
+        text-align: start;
+        animation: fadeDown 2s ease forwards;
+      }
+      em {
+        padding: 1rem 2rem;
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 1rem;
+      
+      }
+      .about-description-text > p {
+        color: var(--text-secondary);
+        padding: 1rem 2rem;
+        text-align: start;
+          animation: fadeUp 2s ease forwards;
+
+      }
+      .about-descrition-image {
+        height: 31rem;
+        /* width: 100%; */
+        background-image: url("https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* ================= MISSION AND VISION  ================= */
+      .section-mission-vision {
+        border-radius: 10px;
+        padding: 2rem 2rem;
+        margin: 2rem 2rem;
+        background-color: var(--text-secondary);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+      .mission-vision-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+      }
+      .mission-text {
+        border-radius: 5px;
+        padding: 1rem 1rem;
+        width: 100%;
+        background-color: var(--primary-color);
+        opacity: 0.9;
+        width: 37rem;
+      }
+      .mission-text > h3,
+      p {
+        padding: 0.5rem;
+        color: var(--text-secondary);
+        text-shadow: var(--hover-color);
+      }
+      .vision-text {
+        border-radius: 5px;
+        padding: 1rem 1rem;
+        height: 220px;
+        width: 100%;
+        background-color: var(--secondary-color);
+        opacity: 0.9;
+        width: 37rem;
+      }
+      .vision-text > h3,
+      p {
+        text-shadow: var(--hover-color);
+
+        padding: 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      /* =================  OUR TEAM  ================= */
+      .our-team {
+        padding: 2rem 2rem;
+      }
+
+      .cards-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 2rem 2rem;
+        gap: 15px;
+      }
+      .team-text{
+        font-weight: 500;
+        color: var(--hover-color);
+      }
+      .card {
+        margin-top: 15px;
+        border-radius: 10px;
+        background-color: var(--text-secondary);
+        width: 18rem;
+        box-shadow: -10px 25px 15px var(--hover-color);
+        transition: 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+      }
+      .card-header {
+        display: flex;
+        justify-content: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 13rem;
+        background-image: url("https://images.unsplash.com/photo-1606799955515-85468ee78c26?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .profile-image {
+        justify-self: center;
+        align-self: center;
+        height: 200px;
+        clip-path: circle(75px);
+      }
+      .card-body {
+        padding: 2rem 2rem;
+      }
+      .card-body > h3 {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      .card-body > h4 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: var(--hover-color);
+      }
+      .card-body > p {
+        margin-top: 0.5rem;
+        color: var(--hover-color);
+      }
+      .follow-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      .follow-links img {
+        padding: 0.5rem;
+        border-radius: 50%;
+        height: 45px;
+      }
+
+      /* ================= WHAT OUR STUDENTS SAY  ================= */
+      .testimonials {
+        padding: 100px 0;
+      }
+
+      .container {
+        max-width: 70rem;
+        margin: auto;
+        padding: 0 15px;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .section-header {
+        font-family: 35px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--secondary-color);
+        line-height: 1.2;
+      }
+      .section-header > h2 {
+        font-size: 2rem;
+      }
+
+      .testimonials-item {
+        background-color: var(--text-secondary);
+        padding: 30px;
+        border-radius: 30px;
+        z-index: 1;
+      }
+      .testimonials-item .info {
+        display: flex;
+        align-items: center;
+      }
+      .testimonials-item img {
+        max-width: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+      .testimonials-item .name {
+        font-size: 24px;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.2;
+      }
+      .testimonials-item .job {
+        text-transform: capitalize;
+        color: var(--hover-color);
+      }
+      .testimonials-item p {
+        margin-top: 20px;
+        color: var(--hover-color);
+      }
+      .testimonials-item .rating {
+        margin-top: 15px;
+        font-size: 14px;
+        color: var(--primary-color);
+      }
+      .testimonials .swiper-pagination {
+        position: relative;
+        margin-top: 40px;
+        bottom: auto;
+      }
+      .swiper-text p {
+        font-weight: 600;
+        padding: 0.25rem;
+        text-align: center;
+        color: var(--hover-color);
+      }
+      .testimonials .swiper-pagination-bullet {
+        height: 15px;
+        width: 15px;
+        background-color: var(--hover-color);
+        z-index: 1;
+      }
+
+      /* ================= RESPONSIVE =================  */
+
+      @media (width <= 790px) {
+        .about-description {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .mission-text,
+        .vision-text {
+          flex: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- -------------------- NAVIGATION -------------------- -->
+    <section id="header"></section>
+
+    <!-- -------------------- ABOUT DESCRIPTION  --------------------  -->
+    <section class="about-description">
+      <div class="about-description-text">
+        <h1>About International English Academy</h1>
+        <em>Based in Cape Town, South Africa.</em>
+        <p class="reveal">
+          Since its establishment in 2004, IEA has continuously pursued
+          effective methods for teaching English to non-native speakers. Through
+          these efforts, it has developed a distinctive educational system
+          grounded in its own philosophy. This system emphasizes close
+          monitoring of learning outcomes, immediate feedback, small class sizes
+          of no more than nine students, immersive cultural experiences, and
+          strong instructional management to ensure engaging and dynamic
+          classes.
+        </p>
+      </div>
+      <div class="about-descrition-image"></div>
+    </section>
+    <!-- -------------------- MISSION AND VISION   --------------------  -->
+    <section class="section-mission-vision">
+      <div class="section-header">
+        <h2>Mission & Vision</h2>
+      </div>
+      <div class="mission-vision-container">
+        <div class="mission-text ">
+          <h3>Our Mission</h3>
+          <p class="reveal">
+            Our mission is to provide the highest quality English language
+            learning experience to students who wish to achieve conversational
+            or academic proficiency in order to live, work or study in an
+            English speaking environment. By maintaining a low student/teacher
+            ratio (9 students or less per class) and a comprehensive curriculum
+            that focuses on life skills development and cultural immersion, we
+            ensure that the IEA experience is uniquely rewarding for our
+            students.
+          </p>
+        </div>
+        <div class="vision-text">
+          <h3>Our Vision</h3>
+          <p class="reveal">
+            Our aim is to be one of the leading English language schools in Cape
+            Town - South Africa, providing the best possible English education
+            through small class sizes and affordable tuition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------  OUR TEAM  --------------------  -->
+    <section class="our-team">
+      <div class="section-header">
+        <h2>Meet the Team</h2>
+        <p class="team-text">Dedication. Expertise. Passion.</p>
+
+      </div>
+      <div class="cards-container">
+        <div class="card reveal">
+          <div class="card-header">
+            <img
+              class="profile-image"
+              src="./images/team-member-1.avif"
+              alt="team-member-1"
+            />
+          </div>
+          <div class="card-body">
+            <h3>Adam Francisco</h3>
+            <h4>English Teacher</h4>
+            <p>✓ Speaks English & Portuguese</p>
+            <p>✓ TEFL Certified</p>
+            <p>✓ 8 Years+ experience</p>
+            <div class="follow-links">
+              <a target="_blank" href=""><img src="./icons/linkedin-icon.svg" alt="linkedin-icon"/></a>
+              <a target="_blank" href=""><img src="./icons/facebook-icon.svg" alt="facebook-icon" /></a>
+              <a target="_blank" href=""> <img src="./icons/instagram-icon.svg" alt="instagram-icom"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-header">
+            <img
+              class="profile-image"
+              src="./images/team-member-2.avif"
+              alt="team-member-2"
+            />
+          </div>
+          <div class="card-body">
+            <h3>Moegamat Faseegh Sydow</h3>
+            <h4>English Teacher</h4>
+            <p>✓ Speaks English, Afrikaans & Arabic</p>
+            <p>✓ TEFL Certified</p>
+            <p>✓ 8 Years+ experience</p>
+            <div class="follow-links">
+              <a target="_blank" href=""><img src="./icons/linkedin-icon.svg" alt="linkedin-icon"/></a>
+              <a target="_blank" href=""><img src="./icons/facebook-icon.svg" alt="facebook-icon" /></a>
+              <a target="_blank" href=""> <img src="./icons/instagram-icon.svg" alt="instagram-icom"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-header">
+            <img
+              class="profile-image"
+              src="./images/team-member-3.avif"
+              alt="team-member-3"
+            />
+          </div>
+          <div class="card-body">
+            <h3>Helio Antonio</h3>
+            <h4>English Teacher</h4>
+            <p>✓ Speaks English & Portuguese</p>
+            <p>✓ TEFL Certified</p>
+            <p>✓ 8 Years+ experience</p>
+            <div class="follow-links">
+              <a target="_blank" href=""><img src="./icons/linkedin-icon.svg" alt="linkedin-icon"/></a>
+              <a target="_blank" href=""><img src="./icons/facebook-icon.svg" alt="facebook-icon" /></a>
+              <a target="_blank" href=""> <img src="./icons/instagram-icon.svg" alt="instagram-icom"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-header">
+            <img
+              class="profile-image"
+              src="./images/team-member-4.avif"
+              alt="team-member-4"
+            />
+          </div>
+          <div class="card-body">
+            <h3>Edgar Lopes</h3>
+            <h4>English Teacher</h4>
+            <p>✓ Speaks English & Portuguese</p>
+            <p>✓ TEFL Certified</p>
+            <p>✓ 8 Years+ experience</p>
+            <div class="follow-links">
+              <a target="_blank" href=""><img src="./icons/linkedin-icon.svg" alt="linkedin-icon"/></a>
+              <a target="_blank" href=""><img src="./icons/facebook-icon.svg" alt="facebook-icon" /></a>
+              <a target="_blank" href=""> <img src="./icons/instagram-icon.svg" alt="instagram-icom"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-header">
+            <img
+              class="profile-image"
+              src="./images/team-member-5.avif"
+              alt="team-member-5"
+            />
+          </div>
+          <div class="card-body">
+            <h3>Amirah Cornelius</h3>
+            <h4>English Teacher</h4>
+            <p>✓ Speaks English & Afrikaans</p>
+            <p>✓ TEFL Certified</p>
+            <p>✓ 8 Years+ experience</p>
+            <div class="follow-links">
+              <a target="_blank" href=""><img src="./icons/linkedin-icon.svg" alt="linkedin-icon"/></a>
+              <a target="_blank" href=""><img src="./icons/facebook-icon.svg" alt="facebook-icon" /></a>
+              <a target="_blank" href=""> <img src="./icons/instagram-icon.svg" alt="instagram-icom"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-header">
+            <img
+              class="profile-image"
+              src="./images/team-member-6.avif"
+              alt="team-member-6"
+            />
+          </div>
+          <div class="card-body">
+            <h3>Yaseen May</h3>
+            <h4>English Teacher</h4>
+            <p>✓ Speaks English & Afrikaans</p>
+            <p>✓ TEFL Certified</p>
+            <p>✓ 8 Years+ experience</p>
+            <div class="follow-links">
+              <a target="_blank" href=""><img src="./icons/linkedin-icon.svg" alt="linkedin-icon"/></a>
+              <a target="_blank" href=""><img src="./icons/facebook-icon.svg" alt="facebook-icon" /></a>
+              <a target="_blank" href=""> <img src="./icons/instagram-icon.svg" alt="instagram-icom"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- WHAT OUR STUDENTS SAY  --------------------  -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What our Students say</h2>
+        </div>
+        <div class="testimonial-content">
+          <div class="swiper testimonial-slider js-testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="./images/student-1.avif" alt="student-1"/>
+                  <div class="text-box">
+                    <div class="name">Adélia Antonio</div>
+                    <div class="job">Angola</div>
+                  </div>
+                </div>
+                <p>
+                  "I've been a student at the International English Academy for
+                  two months. My experience thus far has been outstanding. I am
+                  particularly fond of their teaching methods, and I can see
+                  noticeable improvements in my English skills."
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="./images//student-2.avif" alt="student-2"/>
+                  <div class="text-box">
+                    <div class="name">Eva Roberto</div>
+                    <div class="job">Angola</div>
+                  </div>
+                </div>
+                <p>
+                  "I've been studying at this school for seven months, and my
+                  experience here has been remarkable. I've learned so much
+                  thanks to our skilled teachers. I wholeheartedly recommend
+                  this institution to anyone looking to improve their English
+                  skills."
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="./images/student-3.avif" alt="student-3"/>
+                  <div class="text-box">
+                    <div class="name">Ewerton Lima</div>
+                    <div class="job">Brazil</div>
+                  </div>
+                </div>
+                <p>
+                  "Studying at the International English Academy has been an
+                  enriching experience. Their dedicated teachers, interactive
+                  classes, and supportive learning environment have greatly
+                  improved my English skills."
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="./images/student-4.avif" alt="student-4"/>
+                  <div class="text-box">
+                    <div class="name">Alexandre Rossi</div>
+                    <div class="job">Angola</div>
+                  </div>
+                </div>
+                <p>
+                  "I'm extremely fond of this school because it boasts excellent
+                  teachers and an effective teaching system. Studying here has
+                  been a rewarding experience."
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                  <i class="fa fa-star"> </i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-text"><p>← Swipe →</p></div>
+          <div class="swiper-pagination js-testimonials-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- FOOTER --------------------  -->
+    <section id="footer"></section>
+
+    <button onclick="topFunction()" id="topArrowBtn" title="Go to top"><img src="./icons/top-arrow.svg" alt="top-arrow"></button>
+    <script src="./js/headerFooter.js"></script>
+    <script src="./js/services.js"></script>
+    <!-- script for the testimonials swiper slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+      //script for the testimonials swiper slider
+      const swiper = new Swiper(".js-testimonials-slider", {
+        grabCursor: true,
+        spaceBetween: 30,
+        pagination: {
+          el: ".js-testimonials-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

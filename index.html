@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEA - International English Academy</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+         body {
+        background-color: var( --pages-sections-bg-color);
+      }
+      /* ================= HERO =================   */
+      .section-hero {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
+        margin-top: 115px;
+        height: 115vh;
+        padding: 7rem 2rem;
+        background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: fadeUp 1s ease forwards;
+      }
+      .hero > h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 2.5rem 2rem;
+        color: var(--text-secondary);
+        text-shadow: 0px 5px 15px var(--text-secondary);
+        animation: fadeUp 2s ease forwards;
+      }
+
+      .hero > p {
+        font-weight: 700;
+        margin: 2.5rem 2rem;
+        color: var(--text-secondary);
+        text-shadow: 0px 5px 15px var(--text-primary);
+        animation: fadeDown 2s ease forwards;
+      }
+      .hero > a {
+        margin: 0.25rem 0.25rem;
+      }
+
+      /* ================= CARDS ================= */
+      .section-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+      .card-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 1.5rem 1.5rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+      }
+      .paragraph-text {
+        text-align: center;
+        margin: 1.5rem 1.5rem;
+        font-weight: 600;
+      }
+      .card-wrapper {
+        display: grid;
+        justify-items: center;
+        padding: 5px 20px;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .card {
+        background-color: var(--text-secondary);
+        width: 10rem;
+        width: 85%;
+        text-align: center;
+        padding: 3rem 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px var(--tertiary-color);
+      }
+      .card > img {
+        border-radius: 100%;
+        height: 3em;
+      }
+      .card > h3 {
+        margin-top: 1rem;
+        color: var (--text-primary);
+      }
+      .card > p {
+        margin-top: 1rem;
+        color: var(--secondary-color);
+      }
+
+      /* ================= COURSE CARDS ================= */
+      .section-course-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .course-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 1.5rem 1.5rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+      }
+      .course-card {
+        text-align: center;
+        margin: 2rem 2rem;
+        width: 20rem;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 5px 15px var(--tertiary-color);
+      }
+      .course-card:hover {
+        box-shadow: 0 15px 35px var(--tertiary-color);
+        transform: translateY(-8px);
+        border: none;
+      }
+
+      .course-card-header.image-1 {
+        height: 30svh;
+        width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1563394867331-e687a36112fd?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .course-card-header.image-2 {
+        height: 30svh;
+        width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1563461660947-507ef49e9c47?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .course-card-header.image-3 {
+        height: 30svh;
+        width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1646579885920-0c9a01cb7078?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .course-card-body {
+        background-color: var(--text-secondary);
+        padding: 3rem 2rem;
+      }
+      .course-card-body > p {
+        margin-top: 15px;
+      }
+      .course-card-body button {
+        margin-top: 15px;
+      }
+      #english-course-1 {
+        color: var(--secondary-color);
+        font-weight: 700;
+      }
+      #english-course-2 {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+      #english-course-3 {
+        color: var(--hover-color);
+        font-weight: 700;
+      }
+
+
+      /* ================= RESPONSIVE =================  */
+
+      @media (width <= 960px) {
+        .section-hero {
+          display: flex;
+          flex-direction: column;
+          height: 105vh;
+        }
+        .course-card {
+          flex: 100%;
+        }
+        .course-card-header {
+          height: 60svh;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- -------------------- NAVIGATION -------------------- -->
+    <section id="header"></section>
+
+    <!-- -------------------- HERO --------------------  -->
+    <section class="section-hero">
+      <div class="hero">
+        <h1>
+          Learn your English <br />
+          in Cape Town!
+        </h1>
+        <p>
+          Improve your english skills with experts teachers <br />
+          in one of the world's most beautiful cities.
+        </p>
+        <a href="./courses.html"> <button class="btn-tp-1">View Courses</button></a>
+       <a href="./contact.html"><button class="btn-tp-2">Contact Us</button></a>
+      </div>
+    </section>
+
+    <!-- -------------------- CARDS --------------------  -->
+    <section class="section-card">
+      <h2 class="card-title">Why choose us?</h2>
+      <!-- <p class="paragraph-text">Learn from highly qualified, native English-speaking teachers</p> -->
+      <div class="card-wrapper">
+        <div class="card reveal">
+          <img
+            src="./icons/experienced-teachers-icon.png"
+            alt="experienced-teachers-icon"
+          />
+          <h3>Experienced Teachers</h3>
+          <p>
+            Learn from highly qualified, <br />native English-speaking teachers
+          </p>
+        </div>
+        <div class="card reveal">
+          <img src="./icons/small-classes-icon.png" alt="small-classes-icon" />
+          <h3>Small classes</h3>
+          <p>Get personalized attention with <br />our small classes sizes.</p>
+        </div>
+        <div class="card reveal">
+          <img
+            src="./icons/great-location-icon.png"
+            alt="great-location-icon"
+          />
+          <h3>Great location</h3>
+          <p>
+            Study in the heart of Cape Town,<br />
+            surrounded by amazing attractions.<br />
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- COURSE CARDS --------------------  -->
+    <h2 class="course-title">Our Courses</h2>
+    <section class="section-course-card">
+      <div class="course-card reveal">
+        <div class="course-card-header image-1"></div>
+        <div class="course-card-body">
+          <h3 id="english-course-1">General English</h3>
+          <p>
+            Learn from highly qualified, <br />native English-speaking teachers
+          </p>
+          <a href="./courses.html#general-english"
+            ><button class="btn-tp-1">Learn More</button></a
+          >
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="course-card-header image-2"></div>
+        <div class="course-card-body">
+          <h3 id="english-course-2">Business English</h3>
+          <p>
+            Get personalized attention <br />
+            with our small class sizes.
+          </p>
+          <a href="./courses.html#business-english"
+            ><button class="btn-tp-1">Learn More</button></a
+          >
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="course-card-header image-3"></div>
+        <div class="course-card-body">
+          <h3 id="english-course-3">Exam Preparation</h3>
+
+          <p>
+            Study in the heart of Cape Town, <br />surrounded by amazing
+            attractions.
+          </p>
+          <a href="./courses.html#exam-preparation"
+            ><button class="btn-tp-1">Learn More</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- FOOTER --------------------  -->
+    <section id="footer"></section>
+
+
+    <button onclick="topFunction()" id="topArrowBtn" title="Go to top"><img src="./icons/top-arrow.svg" alt="top-arrow"></button>
+    <script src="./js/headerFooter.js"></script>
+  </body>
+</html>

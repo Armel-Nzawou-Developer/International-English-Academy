@@ -1,0 +1,371 @@
+/* ================= STYLING FOR SHARED COMPONENTS =================   */
+
+/* ================= NAVIGATION =================   */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1.5rem 0.5rem;
+  background-color: var(--text-secondary);
+  box-shadow: 2px 0px 6px var(--primary-color);
+  height: 115px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.outter-nav {
+  margin: -1rem 1rem;
+}
+/* logo styling here */
+.outter-nav img {
+  height: 6rem;
+  animation: fadeDown 1s ease forwards;
+}
+.inner-nav {
+  display: flex;
+}
+.inner-nav-item {
+  margin: 0.5rem 1rem;
+}
+.inner-nav-item a {
+  font-weight: 600;
+  margin: 1rem 0.5rem;
+  color: var(--text-primary);
+}
+
+/* styling for hover over bottom border */
+.inner-nav-item a {
+  position: relative;
+}
+.inner-nav-item a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.inner-nav-item a:hover::after {
+  width: 100%;
+}
+/* END - styling for hover over bottom border */
+
+.flex-WhatsApp-icon > img {
+  height: 15px;
+}
+.flex-WhatsApp-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.active a {
+  color: var(--primary-color);
+}
+.inner-nav-item button {
+  margin: -1.7rem 0.5rem;
+}
+
+/* ================= BUTTONS =================   */
+.btn-tp-1 {
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-secondary);
+
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  min-width: 8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-tp-1:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-secondary);
+  transition: scale(1.2);
+}
+.btn-tp-2 {
+  border: none;
+  background-color: var(--text-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  min-width: 8rem;
+  cursor: pointer;
+}
+.btn-tp-2:hover {
+  background-color: var(--hover-color);
+  color: var(--text-secondary);
+  transition: scale(1.2);
+}
+
+
+#topArrowBtn img{
+ height: 30px;
+
+}
+#topArrowBtn {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  border-radius: 100%;
+  font-weight: 400;
+  animation: fadeUp 1s ease forwards;
+  box-shadow: 0px 5px 15px var(--hover-color);
+
+}
+
+#topArrowBtn:hover {
+  background-color: var(--hover-color);
+}
+
+/* ================= CUSTOM BACKGROUND COLORS FOR (ACCORDION PANELS) & (COURSES CARDS) =================   */
+.custom-bg-1 {
+  background-color: var(--primary-color);
+  color: var(--text-secondary);
+}
+.custom-bg-2 {
+  background-color: var(--secondary-color);
+  color: var(--text-secondary);
+}
+.custom-bg-3 {
+  background-color: var(--hover-color);
+  color: var(--text-secondary);
+}
+
+/* ================= FOOTER =================   */
+
+.footer {
+  background-color: var(--primary-color);
+}
+
+.footer-list {
+  padding: 2rem 3rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.footer-list-item {
+  margin: 0.5rem 2rem;
+  list-style: none;
+}
+.logo-footer > img {
+  height: 200px;
+}
+.footer-list-item > h1 {
+  font-size: 1.5rem;
+  margin: 1rem 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.footer-list-item > li {
+  margin: 1rem 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+.footer-list-item li :hover {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+.footer-list-item li a {
+  color: var(--text-secondary);
+}
+
+.flex-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.rounded-bg-icons {
+  background-color: var(--text-secondary);
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.rounded-bg-icons:hover {
+  background-color: var(--text-primary);
+}
+.rounded-bg-icons img {
+  margin: 12px 12px;
+  height: 25px;
+}
+.copyright {
+  padding: 1rem 1rem;
+  background-color: var(--tertiary-color);
+  text-align: center;
+}
+.copyright > p {
+  font-size: small;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ================= ANIMATIONS =================   */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*--reveal on scroll  --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+
+  animation: revealAnim linear forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+@keyframes revealAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* ================= RESPONSIVE =================   */
+#menu__toggle {
+  position: absolute;
+  left: -9999px; /* moves horizontal navbar off-screen */
+}
+
+@media (width <= 970px) {
+  .outter-nav img {
+    width: 100%;
+  }
+
+  .inner-nav-item {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .inner-nav {
+    visibility: visible;
+    left: 0;
+  }
+
+  /* fadUp styling for the navbar on smaller screen */
+  #menu__toggle:checked ~ .inner-nav {
+    animation: fadeUp 1s ease forwards;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    margin: 5px 5px;
+    cursor: pointer;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition-duration: 0.25s;
+  }
+
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  .inner-nav {
+    flex-direction: column;
+    place-items: center;
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 115px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 15px;
+
+    opacity: 0.9;
+    box-shadow: 1px 0px 6px var(--primary-color);
+    transition-duration: 0.55s;
+    z-index: 1;
+    background-color: var(--text-secondary);
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-list-item {
+    margin: 0.5rem 0.5rem;
+  }
+  .copyright {
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 2.5rem;
+  }
+  .copyright > p {
+    margin: 5px 5px;
+  }
+}
